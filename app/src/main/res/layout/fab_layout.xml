@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.floatingactionbutton.FloatingActionButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fab_add"
+    app:backgroundTint="@color/colorPrimary"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="8dp"
+    android:src="@drawable/ic_add"
+    app:layout_behavior="@string/fab_transformation_scrim_behavior"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+

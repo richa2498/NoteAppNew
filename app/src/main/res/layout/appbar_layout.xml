@@ -1,0 +1,26 @@
+<com.google.android.material.appbar.AppBarLayout android:id="@+id/appBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_scrollFlags="scroll|snap"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <EditText
+        android:id="@+id/edtSearch"
+        android:hint="Search..."
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/ic_search"
+        android:layout_marginStart="10pt"
+        android:layout_marginEnd="10pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.google.android.material.appbar.AppBarLayout>

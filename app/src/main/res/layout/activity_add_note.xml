@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddNoteActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/appbar_layout" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edtTitleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appBar"
+            android:hint="Title"
+            app:layout_behavior="@string/fab_transformation_scrim_behavior">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtNtitle"
+                android:lines="1"
+                android:maxLines="1"
+                android:isScrollContainer="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatMultiAutoCompleteTextView
+            android:id="@+id/edtNdesc"
+            android:hint="Description"
+            android:isScrollContainer="true"
+            android:scrollbars="vertical"
+            android:layout_below="@+id/edtTitleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/mImageView"
+            android:layout_below="@+id/edtNdesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <uk.co.markormesher.android_fab.FloatingActionButton
+        android:id="@+id/fab_audio_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        app:buttonIcon="@drawable/ic_audio"
+        app:internalOffsetEnd="30pt"
+        app:layout_behavior="@string/fab_transformation_scrim_behavior"
+        app:useCompatPadding="true" />
+
+    <uk.co.markormesher.android_fab.FloatingActionButton
+        android:id="@+id/fab_image_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonIcon="@drawable/ic_image"
+        app:buttonPosition="bottom|end"
+        app:internalOffsetEnd="60pt"
+        app:layout_behavior="@string/fab_transformation_scrim_behavior"
+        app:useCompatPadding="true" />
+
+    <uk.co.markormesher.android_fab.FloatingActionButton
+        android:id="@+id/fab_direction_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        app:buttonIcon="@drawable/ic_directions"
+        app:layout_behavior="@string/fab_transformation_scrim_behavior"
+        app:useCompatPadding="true" />
+
+    <uk.co.markormesher.android_fab.FloatingActionButton
+        android:id="@+id/fab_move_Note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:buttonIcon="@drawable/ic_directions"
+        app:buttonPosition="start|bottom"
+        app:layout_behavior="@string/fab_transformation_scrim_behavior"
+        app:useCompatPadding="true" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
